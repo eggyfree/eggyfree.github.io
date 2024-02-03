@@ -1,0 +1,779 @@
+  <!DOCTYPE HTML>
+<html data-theme="light" class="">
+
+<head>
+  <meta content="always" name="referrer">
+  <link rel="icon" type="image/png" href="">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#eee">
+  <title>seblog</title>
+  <!-- 使用url函数转换相关路径 -->
+  <link rel="preconnect" href="//gcore.jsdelivr.net" />
+  <!--<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css">-->
+  <link rel="stylesheet" href="http://218.250.86.95:8081/usr/themes/butterfly/index.css?v1.7.3">
+  <link rel="stylesheet" href="http://218.250.86.95:8081/usr/themes/butterfly/css/style.css?v1.7.8">
+  <!--魔改美化-->
+    <!--百度统计-->
+    <!--谷歌AdSense广告-->
+    <!--图标库-->
+  <link href="https://at.alicdn.com/t/font_3159629_5bvsat8p5l.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.5.1/css/all.min.css">
+  <!--其余静态文件-->
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/css/fancybox.css">
+  <link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/css/OwO.min.css">
+      <link rel="stylesheet" href="http://218.250.86.95:8081/usr/themes/butterfly/css/snackbar.min.css" media="print" onload="this.media='all'">
+    <script src="http://218.250.86.95:8081/usr/themes/butterfly/js/snackbar.min.js"></script>
+        <style>
+      img[data-lazy-src]:not(.loaded) {
+        filter: blur(10px) brightness(1);
+      }
+
+      img[data-lazy-src].error {
+        filter: none;
+      }
+
+          </style>
+      <!--额外的-->
+  <script>
+    const GLOBAL_CONFIG = {
+      root: "/",
+      algolia: void 0,
+      localSearch: {
+        path: undefined,
+        languages: {
+          hits_empty: "回车查询：${query}"
+        }
+      },
+      translate: {
+        defaultEncoding: 2,
+        translateDelay: 0,
+        msgToTraditionalChinese: "繁",
+        msgToSimplifiedChinese: "简"
+      },
+      noticeOutdate: void 0,
+      highlight: {
+        plugin: "highlighjs",
+        highlightCopy: !0,
+        highlightLang: !0,
+        highlightHeightLimit: 400
+      },
+      copy: {
+        success: "复制成功",
+        error: "复制错误",
+        noSupport: "浏览器不支持"
+      },
+      relativeDate: {
+        homepage: !0,
+        post: !0
+      },
+      runtime: "天",
+      date_suffix: {
+        just: "",
+        min: "",
+        hour: "",
+        day: "",
+        month: ""
+      },
+      copyright: undefined,
+      lightbox: "fancybox",
+      Snackbar: {
+        "chs_to_cht": "你已切换为繁体",
+        "cht_to_chs": "你已切换为简体",
+        "day_to_night": "你已切换为深色模式",
+        "night_to_day": "你已切换为浅色模式",
+        "bgLight": "#49b1f5",
+        "bgDark": "#121212",
+        "position": "top-left"
+      },
+      source: {
+        justifiedGallery: {
+          js: "https://cdn.bootcdn.net/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js",
+          css: "https://cdn.bootcdn.net/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css"
+        }
+      },
+      isPhotoFigcaption: !1,
+      islazyload: !0,
+      isAnchor: !0,
+      percent: {
+        toc: !0,
+        rightside: !0
+      },
+      coverPosition: 'cross',
+    }
+    var saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+    const getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  </script>
+  <script id="config-diff">
+    var GLOBAL_CONFIG_SITE = {
+      isPost: !0,
+      isHome: !0,
+      isHighlightShrink: !0,
+      isToc: !0,
+    }
+  </script>
+      <script id="config_change">
+      var GLOBAL_CONFIG_SITE = {
+        isPost: !1,
+        isHome: !0,
+        isHighlightShrink: !1,
+        isToc: !0,
+      }
+    </script>
+    <noscript>
+    <style type="text/css">
+      #nav {
+        opacity: 1
+      }
+
+      .justified-gallery img {
+        opacity: 1
+      }
+
+      #recent-posts time,
+      #post-meta time {
+        display: inline !important
+      }
+    </style>
+  </noscript>
+  <script>
+    (e => {
+      e.saveToLocal = {
+        set: (e, t, a) => {
+          if (0 === a) return;
+          const o = {
+            value: t,
+            expiry: Date.now() + 864e5 * a
+          };
+          localStorage.setItem(e, JSON.stringify(o))
+        },
+        get: e => {
+          const t = localStorage.getItem(e);
+          if (!t) return;
+          const a = JSON.parse(t);
+          if (!(Date.now() > a.expiry)) return a.value;
+          localStorage.removeItem(e)
+        }
+      }, 
+      e.getScript = (e, t = {}) => new Promise(((a, o) => {
+        const c = document.createElement("script");
+        c.src = e, c.async = !0, c.onerror = o, c.onload = c.onreadystatechange = function() {
+          const e = this.readyState;
+          e && "loaded" !== e && "complete" !== e || (c.onload = c.onreadystatechange = null, a())
+        }, Object.keys(t).forEach((e => {
+          c.setAttribute(e, t[e])
+        })), document.head.appendChild(c)
+      })), 
+      e.getCSS = (e, t = !1) => new Promise(((a, o) => {
+        const c = document.createElement("link");
+        c.rel = "stylesheet", c.href = e, t && (c.id = t), c.onerror = o, c.onload = c.onreadystatechange = function() {
+          const e = this.readyState;
+          e && "loaded" !== e && "complete" !== e || (c.onload = c.onreadystatechange = null, a())
+        }, document.head.appendChild(c)
+      })), 
+      e.activateDarkMode = () => {
+        document.documentElement.setAttribute("data-theme", "dark"), null !== document.querySelector('meta[name="theme-color"]') && document.querySelector('meta[name="theme-color"]').setAttribute("content", "#0d0d0d")
+      }, 
+      e.activateLightMode = () => {
+        document.documentElement.setAttribute("data-theme", "light"), null !== document.querySelector('meta[name="theme-color"]') && document.querySelector('meta[name="theme-color"]').setAttribute("content", "#ffffff")
+      };
+      const t = saveToLocal.get("theme"),
+        a = 2 === 4,
+        o = 2 === 1,
+        c = 2 === 2,
+        n = !a && !o && !c;
+      if (void 0 === t) {
+        if (o) activateLightMode();
+        else if (a) activateDarkMode();
+        else if (n) {
+          const e = (new Date).getHours();
+          e <= 7 || e >= 20 ? activateDarkMode() : activateLightMode()
+        }
+        window.matchMedia("(prefers-color-scheme: dark)").addListener((e => {
+          void 0 === saveToLocal.get("theme") && (e.matches ? activateDarkMode() : activateLightMode())
+        }))
+      } else "light" === t ? activateLightMode() : activateDarkMode();
+      const d = saveToLocal.get("aside-status");
+      void 0 !== d && ("hide" === d ? document.documentElement.classList.add("hide-aside") : document.documentElement.classList.remove("hide-aside"));
+      /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && document.documentElement.classList.add("apple")
+    })(window)
+  </script>
+  <style type="text/css" data-typed-js-css="true">
+    .typed-cursor {
+      opacity: 1;
+    }
+
+    .typed-cursor.typed-cursor--blink {
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+      animation: typedjsBlink 0.7s infinite;
+    }
+
+    @keyframes typedjsBlink {
+      50% {
+        opacity: 0.0;
+      }
+    }
+
+    @-webkit-keyframes typedjsBlink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <!--额外的-->
+
+    <meta name="description" content="Your description here." />
+<meta name="keywords" content="typecho,php,blog" />
+<meta name="template" content="butterfly" />
+<link rel="pingback" href="http://218.250.86.95:8081/index.php/action/xmlrpc" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://218.250.86.95:8081/index.php/action/xmlrpc?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://218.250.86.95:8081/index.php/action/xmlrpc?wlw" />
+<link rel="alternate" type="application/rss+xml" title="seblog &raquo; RSS 2.0" href="http://218.250.86.95:8081/index.php/feed/" />
+<link rel="alternate" type="application/rdf+xml" title="seblog &raquo; RSS 1.0" href="http://218.250.86.95:8081/index.php/feed/rss/" />
+<link rel="alternate" type="application/atom+xml" title="seblog &raquo; ATOM 1.0" href="http://218.250.86.95:8081/index.php/feed/atom/" />
+        <style>
+      #dSearch {
+        display: inline-block;
+      }
+
+      #dSearch>input {
+        border: none;
+        opacity: 1;
+        outline: none;
+        width: 35px;
+        text-indent: 2px;
+        transition: all .5s;
+        background: transparent;
+      }
+
+      #page-header.nav-fixed #nav ::placeholder,
+      #page-header.nav-fixed #nav input {
+        color: var(--font-color);
+      }
+
+      #nav ::placeholder,
+      #nav input {
+        color: var(--light-grey);
+      }
+
+      #page-header.not-top-img #nav ::placeholder,
+      #page-header.not-top-img #nav input {
+        color: var(--font-color);
+        text-shadow: none;
+      }
+
+      #page-header.nav-fixed #nav a:hover {
+        color: unset;
+      }
+    </style>
+  </head>
+
+<body>
+  <script src="http://218.250.86.95:8081/usr/themes/butterfly/js/main.js?v1.7.3"> </script>
+  <script src="http://218.250.86.95:8081/usr/themes/butterfly/js/utils.js?v1.7.3"> </script>
+  <script src="http://218.250.86.95:8081/usr/themes/butterfly/js/tw_cn.js?v1.7.3"> </script>
+  
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/jquery.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/instantpage.min.js">
+    type = "module" >
+  </script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/medium-zoom.min.js"> </script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/dream-msg.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/lazyload.iife.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/fancybox.umd.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/OwO.min.js"></script>
+  <script src="https://gcore.jsdelivr.net/gh/wehaox/CDN@main/butterfly/js/artplayer.js"> </script>
+
+  <!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+  <!--移动导航栏-->
+  <div id="sidebar">
+    <div id="menu-mask" style="display: none;"></div>
+    <div id="sidebar-menus" class="">
+      <div class="avatar-img is-center">
+        <img src="#null" onerror="this.onerror=null;this.src='https://gcore.jsdelivr.net/npm/hexo-butterfly@1.0.0/themes/butterfly/source/img/friend_404.gif'" alt="avatar">
+      </div>
+      <div class="site-data">
+        <div class="card-info-data site-data is-center">
+          <a href="#null">
+            <div class="headline">文章</div>
+            <div class="length-num">
+              1            </div>
+          </a>
+          <a href="#null">
+            <div class="headline">标签</div>
+            <div class="length-num">0</div>
+          </a>
+          <a href="#null">
+            <div class="headline">
+              分类
+            </div>
+            <div class="length-num">
+              1            </div>
+          </a>
+        </div>
+      </div>
+      <hr>
+      <div class="menus_items">
+        <div class="menus_item">
+          <a class="site-page" href="http://218.250.86.95:8081/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a>
+        </div>
+                               <div class="menus_item">
+              <a class="site-page" href="http://218.250.86.95:8081/index.php/start-page.html">
+                <i class='fa-fw fas fa-user'></i>                <span>关于</span>
+                </a>
+            </div>
+                                </div>
+    </div>
+  </div>
+  <!--移动导航栏-->
+<body style="zoom: 1;">
+    <div id="web_bg"></div>
+<div class="page" id="body-wrap">
+<header class="full_page" id="page-header"  style="background-image: url(https://s2.loli.net/2023/01/18/bIJTVaR3MLPzcZ7.jpg)">
+        <div id="site-info">
+            <h1 id="site-title">Your description here.</h1>
+            <div id="site-subtitle">
+                <span id="subtitle"></span>
+            </div>
+        </div>
+        <div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div>
+      
+<nav id="nav" class="show" >
+         <span id="blog-info">
+            <a href="http://218.250.86.95:8081/">
+                                <span class="site-name">seblog</span>
+                            </a>
+       </span>
+            <div id="menus">
+                  <div id="search-button">
+                      <a class="site-page social-icon search">
+                      <i class="fas fa-search fa-fw"></i>
+                                            <form method="post" action="http://218.250.86.95:8081/" role="search" id="dSearch">
+                        <input type="text" placeholder="搜索" id="dSearchIn" name="s" required="required">
+                      </form>
+                                            </a> 
+                      </div>
+                 <div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div>
+              <div class="menus_items">
+                    <div class="menus_item">
+                        <a class="site-page" href="http://218.250.86.95:8081/">
+                            <li class="fa-fw fas fa-home"></li>首页</a>
+                    </div>
+                                                                                            <div class="menus_item">
+                            <a class="site-page" href="http://218.250.86.95:8081/index.php/start-page.html" title="关于">
+                            <li class='fa-fw fas fa-user'></li>                            <span>关于</span>
+                            </a>
+                       </div>
+                                                                            </div>
+            </div>
+    </nav></header><main class="layout" id="content-inner">
+<div class="recent-posts" id="recent-posts">
+    <div class="recent-post-item">
+      
+        <wehao class="post_cover">
+             <a href="http://218.250.86.95:8081/index.php/archives/start.html">
+                <img class="post-bg" data-lazy-src="/usr/themes/butterfly/img/DefualtThumbnail.jpg" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" onerror="this.onerror=null;this.src='http://218.250.86.95:8081/usr/themes/butterfly/img/404.jpg'"></a>
+        </wehao>
+        <div class="recent-post-info">
+        <a  class="article-title" href="http://218.250.86.95:8081/index.php/archives/start.html">欢迎使用 Typecho</a>
+        <div class="article-meta-wrap">
+                    <span class="post-meta-date">
+                <i class="far fa-calendar-alt"></i>
+                <span class="article-meta-label">发表于</span>
+                <span datetime="2024-01-28" style="display: inline;" pubdate>2024-01-28</span>
+            </span>
+            <span class="post-meta-date">
+                <span class="article-meta-separator">|</span>
+                <i class="fas fa-history"></i>
+                <span class="article-meta-label">更新于</span>
+                <span datetime="2024-01-28"  style="display: inline;">2024-01-28</span>
+            </span>
+            <span class="article-meta">
+                <span class="article-meta-separator">|</span>
+                <i class="fas fa-inbox"></i>
+                <a href="http://218.250.86.95:8081/index.php/category/default/">默认分类</a>            </span>
+            <span class="article-meta">
+                <span class="article-meta-separator">|</span>
+                <i class="fa-solid fa-pen-nib"></i>
+                作者: <a itemprop="name" href="http://218.250.86.95:8081/index.php/author/1/" rel="author">Admin</a>
+            </span>
+            <span class="article-meta">
+                <span class="article-meta-separator">|</span>
+                <i class="fas fa-comments"></i>
+                <a class="twikoo-count" href="http://218.250.86.95:8081/index.php/archives/start.html#comments">1 条评论</a>
+            </span>
+        </div>
+        <div class="content">
+            如果您看到这篇文章,表示您的 blog 已经安装成功.<br><a href="http://218.250.86.95:8081/index.php/archives/start.html" title="欢迎使用 Typecho">阅读全文...</a>            </div>
+    </div>
+</div>
+<nav id="pagination">
+ </nav>
+</div>
+<div class="aside-content" id="aside-content">
+         
+    <div class="card-widget card-info">
+	 <div class="card-info-avatar is-center">
+	     <div class="avatar-img">
+	         <img data-lazy-src="#null" onerror="this.onerror=null;this.src='/usr/themes/butterfly/img/friend_404.gif'" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" alt="avatar">
+	      </div>
+		<div class="author-info__name">
+			Admin		</div>
+		<div class="author-info__description">
+			作者描述		</div>
+	</div>
+	<div class="card-info-data">
+		<div class="card-info-data site-data is-center">
+			<a href="#null">
+				<div class="headline">文章</div>
+				<div class="length-num">
+				1				</div>
+			</a>
+			<a href="#null">
+				<div class="headline">标签</div>
+				<div class="length-num">0</div>
+			</a>
+			<a href="#null">
+				<div class="headline">
+					分类
+				</div>
+				<div class="length-num">
+					1				</div>
+			</a>
+		</div>
+	</div>
+	<a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="#null">
+		<i class="fas fa-link">
+		</i>
+		<span>
+			个人网站		</span>
+	</a>
+	    </div>
+         
+    <div class="card-widget card-announcement"><div class="item-headline">
+        <i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div>
+    <div class="announcement_content">这里是公告<br></div></div>
+             <div class="sticky_layout">
+<!--微博热搜-->
+<!--微博热搜end-->
+        <div class="card-widget card-recent-post">
+       <div class="item-headline">
+            <i class="fas fa-history"></i><span>最新文章</span>
+        </div>
+      <div class="aside-list">
+                                     <div class="aside-list-item"> 
+              <a class="thumbnail" href="http://218.250.86.95:8081/index.php/archives/start.html" title="欢迎使用 Typecho" >
+               <img onerror="this.onerror=null;this.src='http://218.250.86.95:8081/usr/themes/butterfly/img/404.jpg'" data-lazy-src="/usr/themes/butterfly/img/DefualtThumbnail.jpg " 
+               src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs="
+               alt="欢迎使用 Typecho">
+               </a>
+               <div class="content">
+                  <a class="title" href="http://218.250.86.95:8081/index.php/archives/start.html">
+                      欢迎使用 Typecho                      </a>
+                  <time datetime="" title="发表于 ">
+                      2024-01-28                  </time>
+               </div>
+              </div>
+                    </div>
+    </div>
+            <div class="card-widget" id="card-newest-comments">
+        <div class="item-headline"><i class="fas fa-bolt"></i><span>最新评论</span></div>
+        <div class="aside-list">
+                            <div class="aside-list-item">
+                <a href="http://218.250.86.95:8081/index.php/archives/start.html#comment-1" class="thumbnail">
+                    <img  src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="lolid41d8cd98f00b204e9800998ecf8427e?s=96&d=mp&r=g" >                </a>
+                <div class="content">
+                <a class="comment" href="http://218.250.86.95:8081/index.php/archives/start.html#comment-1">
+                    欢迎加入 Typecho 大家族                </a>
+                     <div class="name"> 
+                  <span title=" January 28th, 2024 at 12:23 pm"> <a href="https://typecho.org" rel="external nofollow">Typecho</a> / 6天前</span>
+                </div>
+             </div>   
+          </div>
+                </div>
+    </div>
+                <div class="card-widget card-categories">
+        <div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span>
+            </div>
+             <ul class="card-category-list" id="aside-cat-list"> 
+        
+         <li class="card-category-list-item">
+         <a href="http://218.250.86.95:8081/index.php/category/default/" class="card-category-list-link" title="只是一个默认分类"> 
+         <span class="card-category-list-name">默认分类</span>
+          <span class="card-category-list-count"> 1 </span>
+          </a>
+          </li>              </ul>
+        </div>
+        <!-- 标签 -->
+     <div class="card-widget card-tags">
+        <div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div>
+        
+        <div class="card-tag-cloud">
+          
+                </div>
+    </div>
+            <div class="card-widget card-archives">
+        <div class="item-headline">
+            <i class="fas fa-archive"></i><span>归档</span></div>
+        <ul class="card-archive-list">
+            <li class="card-archive-list-item">
+            <a class="card-archive-list-link" href="http://218.250.86.95:8081/index.php/2024/01/">
+            <span class="card-archive-list-date">1月 2024</span>
+            <span class="card-archive-list-count">1</span>
+            </a></li>        </ul>
+	</div>
+      <div class="card-widget card-webinfo">
+     <div class="item-headline">
+   <i class="fas fa-chart-line"></i>
+    <span>网站资讯</span></div>
+     <div class="webinfo">
+   <div class="webinfo-item">
+      <div class="item-name">文章数目 :</div>
+      <div class="item-count">
+          	1           </div></div>
+    <div class="webinfo-item">
+      <div class="item-name">已运行时间 :</div>
+      <div class="item-count" id="runtimeshows" data-publishdate="">
+          1034 天     </div></div>
+    <div class="webinfo-item">
+      <div class="item-name">本站总字数 :</div>
+      <div class="item-count">
+         83.00           </div></div>
+    <div class="webinfo-item">
+      <div class="item-name">本站总访问量 :</div>
+      <div class="item-count" >
+      4      </div></div>
+    <div class="webinfo-item">
+      <div class="item-name">最后更新时间 :</div>
+     <div class="item-count" >
+    6 天前      </div></div>
+  </div>
+  </div>
+     </div>   
+</div>
+<!-- end #sidebar --></main>
+  <footer id="footer">
+    <div id="footer-wrap">
+      <div class="copyright">
+        <div class="copyright">©2024 By Admin</div>
+        <div class="framework-info">
+          <span>由</span>
+          <a target="_blank" href="http://www.typecho.org">Typecho</a><span> 强力驱动</span>
+          <span class="footer-separator">|</span>
+          <span>主题</span>
+          <a id="btheme" target="_blank" href="https://github.com/wehaox/Typecho-Butterfly">Butterfly</a>
+        </div>
+        <div class="footer_custom_text"></div>
+      </div>
+    </div>
+  </footer>
+<style type="text/css" data-typed-js-css="true">
+  .typed-cursor {
+    opacity: 1;
+  }
+
+  .typed-cursor.typed-cursor--blink {
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+  }
+
+  @keyframes typedjsBlink {
+    50% {
+      opacity: 0.0;
+    }
+  }
+
+  @-webkit-keyframes typedjsBlink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+<script type="text/javascript" src="http://218.250.86.95:8081/usr/themes/butterfly/js/custom.main.js"></script>
+<script>
+  </script>
+<!--搜索  -->
+<div id="local-search">
+  <div class="search-dialog">
+    <nav class="search-nav">
+      <span class="search-dialog-title">本地搜索</span>
+      <span id="loading-status"></span>
+      <button class="search-close-button">
+        <i class="fas fa-times"></i>
+      </button>
+    </nav>
+    <div class="search-wrap" style="display: block;">
+      <div id="local-search-input">
+        <form class="local-search-box" method="post" action="http://218.250.86.95:8081/" role="search" id="search">
+          <label for="s" class="sr-only">搜索关键字</label>
+          <input type="text" name="s" placeholder="回车查询" required="required">
+      </div>
+      </form>
+      <hr>
+      <div id="local-search-results"></div>
+    </div>
+  </div>
+  <div id="search-mask" style=""></div>
+</div>
+</div>
+<!--搜索end  -->
+<div class="js-pjax">
+      <script>
+      (function() {
+        const searchButton = document.getElementById('search-button');
+        const input = document.getElementById('dSearchIn');
+        searchButton.addEventListener('click', function() {
+          input.style.width = '150px';
+          input.focus();
+        });
+        input.addEventListener('blur', function() {
+          input.style.width = '35px';
+        });
+      })()
+    </script>
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
+              <script>
+      $(document).ready(function() {
+        var a = document.getElementsByTagName("a");
+        for (let i = 0; i < a.length; i++) {
+          let domain = document.domain;
+          let url = a[i].href;
+          if (typeof(url) != "undefined" && url.length != 0 && url.match(domain) == null && url != "javascript:void(0);") {
+            a[i].setAttribute("target", "_BLANK")
+          }
+        }
+      });
+    </script>
+        <script type="text/javascript" src="http://218.250.86.95:8081/usr/themes/butterfly/js/wehao.js?v1.7.6"></script>
+    <style>
+      #page-header:not(.not-top-img):before {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    </style>
+    <!--打字-->
+                  <script>
+          function subtitleType() {
+            fetch("https://v1.hitokoto.cn").then(t => t.json()).then(t => {
+              o = 0 == "".length ? new Array : " ".split(",");
+              o.unshift(t.hitokoto),
+                new Typed("#subtitle", {
+                  strings: o,
+                  startDelay: 300,
+                  typeSpeed: 150,
+                  loop: true,
+                  backSpeed: 50
+                })
+            })
+          }
+          "function" == typeof Typed ? subtitleType() : getScript("/usr/themes/butterfly/js/typed.min.js")
+            .then(subtitleType)
+        </script>
+              <!--打字end-->
+    <!--判断主页end-->
+    </div>
+<!--js-pjax end-->
+<div id="rightside">
+  <div id="rightside-config-hide" class="">
+    <button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button>
+    <button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button>
+        <button id="translateLink" type="button" title="简繁转换">
+      繁
+    </button>
+    <button id="darkmode" type="button" title="浅色和深色模式转换">
+      <i class="fas fa-adjust">
+      </i>
+    </button>
+    <button id="hide-aside-btn" type="button" title="单栏和双栏切换">
+      <i class="fas fa-arrows-alt-h">
+      </i>
+    </button>
+  </div>
+  <div id="rightside-config-show">
+    <button id="rightside_config" type="button" title="设置">
+      <i class="fas fa-cog fa-spin">
+      </i>
+    </button>
+            <button id="go-up" type="button" title="回到頂部" class="show-percent">
+      <span class="scroll-percent"></span>
+      <i class="fas fa-arrow-up">
+      </i>
+    </button>
+  </div>
+</div><!--pjax-->
+<!--pjax end-->
+</body>
+
+</html><script>
+function ver() {console.log(`
+===================================================================
+                                                                   
+    #####  #    # ##### ##### ###### #####  ###### #      #   #    
+    #    # #    #   #     #   #      #    # #      #       # #     
+    #####  #    #   #     #   #####  #    # #####  #        #      
+    #    # #    #   #     #   #      #####  #      #        #      
+    #    # #    #   #     #   #      #   #  #      #        #     
+    #####   ####    #     #   ###### #    # #      ######   #  
+    
+                            1.7.9
+===================================================================
+`);}
+</script>
